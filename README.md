@@ -1,21 +1,27 @@
 # AI_Image_generator - gjmacias
-QR_generator es una herramienta que crea códigos QR de manera automática. Generar imágenes bidimensionales que almacenan información, como enlaces, texto o datos. Es una forma eficiente de codificar y compartir datos de manera visualmente legible.
+El generador de imágenes de inteligencia artificial (AI Image Generator) emplea el modelo DALL-E 3 desarrollado por OpenAI. Es un modelo de aprendizaje profundo entrenado para generar imágenes creativas a partir de descripciones textuales, conocido como "Generative Pre-trained Transformer" (GPT).
 
 ### Indice
-* [¿Que es QR_generator?](#que-es-qrgenerator)
+* [¿Que es AI_Image_generator?](#que-es-AI_Image_generator)
 * [Que utilizamos?](#que-utilizamos)
 * [Como funciona?](#como-funciona)
 
-### ¿Que es QR_generator?
-Los códigos QR son ampliamente utilizados para compartir información de manera rápida y fácil, ya que se pueden escanear con la mayoría de los dispositivos móviles. Además, mencionar que en Python, la creación de códigos QR es accesible y versátil, permitiendo a los desarrolladores integrar esta funcionalidad en sus aplicaciones o proyectos de manera sencilla.
+### ¿Que es AI_Image_generator?
+ Utiliza la arquitectura de transformer y está preentrenado para entender y generar imágenes a partir de descripciones textuales.
+
+Prompt de Descripción: La aplicación toma una descripción textual como entrada, proporcionada por el usuario. Esta descripción actúa como un "prompt" que guía al modelo en la generación de imágenes.
+
+Generación de Imágenes: La solicitud y el prompt se envían a la API de OpenAI mediante solicitudes HTTP. DALL-E 3 procesa esta información y devuelve una URL que apunta a la imagen generada.
+
+Descarga y Visualización: La aplicación descarga la imagen generada y la muestra en la interfaz de usuario utilizando Streamlit. También proporciona la opción de descargar la imagen generada.
 
 ### Que utilizamos?
-En nuestro **push_swap** tenemos solo las siguentes funciones de librerias externas autorizadas:
+En nuestro **AI_Image_generator** tenemos las siguentes librerias externas:
 
 | imports  | Descripción								 	|
 |-------|-----------------------------------------------------------------------------------|
-| QRCode | Genera la imagen QR mediante un input						|
-| Streamlit | Crea aplicaciones web interactivas para el desarrollo ágil de prototipos y aplicaciones simples.				|
+| Requests | solicita información o, envia una acción, a un servidor web utilizando el protocolo HTTP		|
+| Streamlit | Crea aplicaciones web interactivas para el desarrollo ágil de prototipos y aplicaciones simples.	|
 
 ### Como funciona?
 
@@ -33,15 +39,15 @@ Si no tienes "pip", instálalo siguiendo las instrucciones en https://pip.pypa.i
 
 Clona el repositorio desde GitHub:
 
-	git clone https://github.com/gjmacias/QR_generator
-	cd QR_generator
+	git clone https://github.com/gjmacias/AI_Image_generator/
+	cd AI_Image_generator
 Instala las bibliotecas necesarias utilizando "pip":
 
 	pip install -r requirements.txt
 Finalmente, ejecuta la aplicación Streamlit:
 
-	streamlit run QRGenerator.py
-Esto abrirá tu navegador web con la aplicación QR Generator en ejecución.
+	streamlit run ImageGenerator.py
+Esto abrirá tu navegador web con la aplicación Image Generator en ejecución.
 
 ¡Listo! Ahora deberías tener la aplicación funcionando localmente en tu máquina.
 
